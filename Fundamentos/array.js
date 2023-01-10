@@ -8,7 +8,7 @@ valores[4] = 37
 console.log(valores[4])
 console.log(valores.length)
 
-valores.push({id: 3}, false, null, 'teste')
+valores.push({id: 3}, false, null, 'teste') // O método push() adiciona um ou mais elementos ao final de um array e retorna o novo comprimento desse array.
 
 console.log(valores)
 
