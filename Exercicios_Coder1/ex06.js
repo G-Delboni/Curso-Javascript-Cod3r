@@ -18,6 +18,8 @@ console.log(jurosSimples(100, 10, 3))
 function jurosCompostos(capitalInicial,taxaJuros,tempoAplicacao) {
     taxaJuros = taxaJuros / 100
 
-    let montante = capitalInicial * ( 1 + taxaJuros) * tempoAplicacao
-    return montante
+    let montante = capitalInicial * ( 1 + taxaJuros) ** tempoAplicacao
+    return montante.toFixed(2)
 }
+
+console.log(jurosCompostos(20000, 5, 4))
