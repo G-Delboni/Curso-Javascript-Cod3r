@@ -23,3 +23,4 @@ function jurosCompostos(capitalInicial,taxaJuros,tempoAplicacao) {
 }
 
 console.log(jurosCompostos(20000, 5, 4))
+console.log(jurosCompostos(1500, 10, 2))

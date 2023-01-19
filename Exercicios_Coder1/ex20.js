@@ -45,7 +45,7 @@ function calcularCedulas(valor) {
    
 }
 
-function calcularValorNota(valor) {
+function calcularValorNota(valor) { 
     if (valor >= 100)
         return 100
     else if (valor >= 50)
@@ -62,19 +62,19 @@ function elaborarResultado(cemReais, cinquentaReais, dezReais, cincoReais, umRea
     let resultado = ''
 
     if (cemReais > 0) {
-        resultado += `${cemReais}notas de R$100. `
+        resultado += `${cemReais} notas de R$100. `
     }
     if (cinquentaReais > 0) {
-        resultado += `${cinquentaReais}notas de R$50. `
+        resultado += `${cinquentaReais} notas de R$50. `
     }
     if (dezReais > 0) {
-        resultado += `${dezReais}notas de R$10. `
+        resultado += `${dezReais} notas de R$10. `
     }
     if (cincoReais > 0) {
-        resultado += `${cincoReais}notas de R$5. `
+        resultado += `${cincoReais} notas de R$5. `
     }
     if (umReal > 0) {
-        resultado += `${umReal}notas de R$1. `
+        resultado += `${umReal} notas de R$1. `
     }
     return resultado
 }
