@@ -6,25 +6,55 @@ quantos anos isso acontecerá. Utilize centímetros para as unidades de medida.
 //Resolver quando terminar capítulos de objetos e arrays
 
 function crianca(altura1, taxaCresimento1, altura2, taxaCresimento2) {
-    
-    let taxaCresimentoUm = taxaCresimento1 / 100 
-    let taxaCresimentoDois = taxaCresimento2 / 100 
-    qntAnos = 0
-
     if (altura1 === altura2) {
-        return 'As alturas são iguais.'
+        if (taxaCresimento1 === taxaCresimento2) {
+            return 'As crianças tem alturas e taxas de crescimento iguais'
+        }
+        else if (taxaCresimento1 > taxaCresimento2) {
+            return 'A primeira criança ultrapassará a segunda em 1 ano.'
+        }
+        else {
+            return 'A segunda criança ultrapassará a primeira em 1 ano.'
+        }
     }
 
     else {
-        return `A criaça alcançará a outra em ${crescer()} anos.`
-    }
-    function crescer(altura1, altura2) {
-        while(altura1 > altura2 || altura2 > altura1) {
-            taxaCresimentoUm += taxaCresimentoDois
-            qntAnos++
+        if (altura1 > altura2) {
+            if (taxaCresimento1 >= taxaCresimento2) {
+                return 'A criança menor não ultrapassará a maior'
+            }
+            else {
+                return `A segunda criança ultrapassará a primeira em ${calcularTempo(altura1,taxaCresimento1,altura2,taxaCresimento2)} anos.`
+            }
         }
-        return qntAnos
+            else {
+                if (taxaCresimento2 >= taxaCresimento1) {
+                    return 'A criança menor não ultrapassará a maior'
+                }
+    
+                else {
+                    return `A primeira criança ultrapassará a segunda em ${calcularTempo(altura1,taxaCresimento1,altura2,taxaCresimento2)} anos.`
+                }
+         }
+        
     }
+
+    
 }
 
-console.log(crianca(1.37,5,1.35,10))
+function calcularTempo(alturaMaior,taxaAlturaMaior,alturaMenor,taxaAlturaMenor){
+    let qntAnos = 0
+    while(alturaMaior > alturaMenor){
+        alturaMaior += taxaAlturaMaior
+        alturaMenor += taxaAlturaMenor
+        qntAnos++
+    }
+    return qntAnos
+}
+
+
+console.log(crianca(135,10,135,10))
+console.log(crianca(135,10,135,11))
+console.log(crianca(135,11,135,10))
+console.log(crianca(153,5,135,10))
+console.log(crianca(150, 2, 130, 4));
