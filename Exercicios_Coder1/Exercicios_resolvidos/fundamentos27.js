@@ -36,3 +36,4 @@ function calcularTempo(alturaMenor, taxaAlturaMenor, alturaMaior, taxaAlturaMaio
 }
 
 console.log(calcularCrescimento(150, 2, 130, 4));
+console.log(calcularCrescimento(153,5,135,10))
