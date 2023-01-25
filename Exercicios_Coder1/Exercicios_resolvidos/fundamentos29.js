@@ -1,8 +1,12 @@
 function observarIntervalo (vetor) {
     qtdNumerosNoIntervalo = 0
+    qntNumerosForaDoIntervalo = 0
     for (let i = 0; i < vetor.length; i++) {
         if(vetor[i] >= 10 && vetor[i] <= 20){
             qtdNumerosNoIntervalo++
+        }
+        else {
+            qntNumerosForaDoIntervalo
         }
     }
     return `${qtdNumerosNoIntervalo} números dentro do intervalo.`
