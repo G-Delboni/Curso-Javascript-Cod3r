@@ -3,13 +3,15 @@ como parâmetros um número n (número de termo), a1 (o primeiro termo) e r (a r
 bem como a soma dos elementos.
 */
 
-function progressaoAritmetica(numeroTermo, primeiroTermo, razao) {
-    let proximoTermo = primeiroTermo + razao
-    while (numeroTermo > 0) {
-        proximoTermo +=razao
-        numeroTermo--
-        console.log(proximoTermo)
+function progressaoAritmetica(numeroTermos, primeiroTermo, razao) {
+    let termoN = primeiroTermo + (numeroTermos - 1) * razao
+    let somaTermos = (primeiroTermo + termoN) / 2 * numeroTermos
+    while(numeroTermos > 0) {
+        numeroTermos--
+        console.log(termoN)
+        termoN -= razao
     }
+    return somaTermos
 }
 
 console.log(progressaoAritmetica(5,1,2))
