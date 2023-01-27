@@ -4,3 +4,19 @@ Declarados os vetores, utilize a função de união concat() de duas maneiras di
 mostre o resultado no console. Todos os elementos do vetor resultado deverão aparecer no console.
 */
 
+const vetorInteiro = [1,2,3,4]
+const vetorString = ['A','B','C','D']
+const vetorDouble = [1.1,2.2,3.3,4.4]
+
+const vetorStringInteiro = vetorInteiro.concat(vetorString)
+console.log(vetorStringInteiro)
+
+function concatenar(...args){
+    let resultado = []
+    for(let i=0; i<arguments.length;i++){
+        resultado = resultado.concat(arguments[i])
+    }
+    return resultado
+}
+
+console.log(concatenar(vetorDouble, vetorString))
