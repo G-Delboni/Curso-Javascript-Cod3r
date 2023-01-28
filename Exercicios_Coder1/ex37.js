@@ -14,4 +14,17 @@ function progressaoAritmetica(numeroTermos, primeiroTermo, razao) {
     return somaTermos
 }
 
+function progressaoGeometrica(numeroTermos, primeiroTermo, razao) {
+    let termoN = primeiroTermo * (razao ** (numeroTermos -1 ))
+    let somaTermos = primeiroTermo * (razao**numeroTermos -1) / (razao - 1)
+    while(numeroTermos > 0) {
+        numeroTermos--
+        console.log(termoN)
+        termoN /= razao
+    }
+    return somaTermos
+}
+
 console.log(progressaoAritmetica(5,1,2))
+console.log('--------------------------')
+console.log(progressaoGeometrica(5,4,3))
