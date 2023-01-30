@@ -7,3 +7,4 @@ function adicionarMais(vezes) {
 }
 
 console.log(adicionarMais(3))
+console.log(adicionarMais(8))
